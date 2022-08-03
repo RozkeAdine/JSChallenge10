@@ -13,7 +13,7 @@ const aries = `♈`,
   aquarius = `♒`,
   pisces = `♓︎`;
 
-// In Western Astrology there are 12 signs, organized by Earth Elements (Eart, Water, Air, Fire)  //
+// In Western Astrology there are 12 signs, organized by Earth Elements (Earth, Water, Air, Fire)  //
 // You are going to manipulate the following arrays along with this challenge:  //
 
 const fireSigns = [aries, leo];
@@ -30,7 +30,9 @@ const waterSigns = [cancer, scorpio, pisces];
 
 */
 
-// ✒️ Write your code here
+
+fireSigns.push(sagittarius);
+console.log(fireSigns)
 
 
 console.log(
@@ -46,7 +48,8 @@ console.log(
       the result.
 */
 
-// ✒️ Write your code here
+earthSigns.pop();
+console.log(earthSigns)
 
 console.log(earthSigns[earthSigns.length - 1] !== "♐" ? "Good Answer ✅" : "Wrong Answer ❌");
 
@@ -55,13 +58,13 @@ console.log(earthSigns[earthSigns.length - 1] !== "♐" ? "Good Answer ✅" : "W
      Please initialize an empty array and store it in a let variable called zodiacSigns
 
  */
-let zodiacSigns = null; // ✒️ Write your code here
+let zodiacSigns = [];
 
 /*  
      🏁 🏁 Merge Fire, Earth, Water, and Air arrays into zodiacSigns (in that order), using the concat methods 
 */
 
-// ✒️ Write your code here
+zodiacSigns = [...fireSigns, ...earthSigns, ...waterSigns, ...airSigns],
 
 console.log(
   (zodiacSigns !== null && zodiacSigns.toString() === "♈,♌,♐,♉,♍,♑,♋,♏,♓︎,♊,♎,♒")
@@ -72,4 +75,4 @@ console.log(
     🏁 Please print dynamically in console how many elements you have now in the zodiacSigns array
  */
 
-console.log(`There is <Write your code here> signs in the zodiac`);
+console.log('There is ' + zodiacSigns.length + ' signs in the zodiac');
